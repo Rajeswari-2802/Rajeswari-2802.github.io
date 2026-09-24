@@ -2,7 +2,7 @@
 
 Personal portfolio: embedded systems, IoT and VLSI projects.
 
-**Live:** https://rajeswari-2802.github.io
+**Live:** https://Rajeswari-2802.github.io
 
 ## Structure
 
