@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gas Detection & Emergency Shutdown | Rajeswari T</title>
+<meta name="description" content="Arduino-based LPG leak detection with alarm and automatic servo valve shutdown. Top 5 in a mini project competition.">
+<meta name="theme-color" content="#020604">
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="nebula"></div>
+<canvas id="cosmos"></canvas>
+<div class="cursor-glow"></div>
+<header class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../assets/logo.svg" alt="Rajeswari T logo"><span>RAJESWARI T<small>EMBEDDED // ECE</small></span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../assets/Rajeswari_T_Resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume ↗</a>
+    <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="p-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+    <div class="eyebrow reveal">P/03 · Safety system · Top 5</div>
+    <h1 class="reveal d1">Gas leak detection that <em>acts, not just alarms.</em></h1>
+    <p class="lead reveal d2">An Arduino-based LPG leakage detector that doesn't stop at a warning: when gas crosses a safe threshold it sounds an alarm, shows the status on an LCD and turns a servo to close the gas line automatically.</p>
+    <div class="p-meta"><div class="panel reveal d0"><small>Type</small><b>Safety / automation</b></div><div class="panel reveal d1"><small>Controller</small><b>Arduino Uno</b></div><div class="panel reveal d2"><small>Sensor</small><b>MQ-6 LPG</b></div><div class="panel reveal d3"><small>Result</small><b>Top 5, Mini Project Competition</b></div></div>
+    <div class="panel p-diagram reveal"><svg viewBox="0 0 900 300" role="img" aria-label="System architecture diagram">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3ee07a"/></marker>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs><g><rect x="30" y="115" width="170" height="70" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="115.0" y="144.0" text-anchor="middle" font-size="13" font-weight="500">MQ-6 Sensor</text><text x="115.0" y="163.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">LPG concentration</text></g><g><rect x="320" y="95" width="200" height="110" rx="10" fill="#0d2417" stroke="#3ee07a" stroke-width="1.4" filter="url(#glow)"/><text x="420.0" y="144.0" text-anchor="middle" font-size="13" font-weight="500">Arduino Uno</text><text x="420.0" y="163.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">threshold logic</text></g><g><rect x="660" y="20" width="200" height="58" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="760.0" y="43.0" text-anchor="middle" font-size="13" font-weight="500">Buzzer</text><text x="760.0" y="62.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">audible alarm</text></g><g><rect x="660" y="121" width="200" height="58" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="760.0" y="144.0" text-anchor="middle" font-size="13" font-weight="500">Servo Valve</text><text x="760.0" y="163.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">shuts gas line</text></g><g><rect x="660" y="222" width="200" height="58" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="760.0" y="245.0" text-anchor="middle" font-size="13" font-weight="500">16×2 LCD</text><text x="760.0" y="264.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">live status</text></g><path d="M200 150 H318" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M200 150 H318" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><text x="259" y="140" text-anchor="middle" font-size="10" style="fill:#8cffb4">analog</text><path d="M520 125 C590 125 590 49 658 49" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M520 125 C590 125 590 49 658 49" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M520 150 H658" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M520 150 H658" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M520 175 C590 175 590 251 658 251" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M520 175 C590 175 590 251 658 251" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/></svg><div class="cap">Fig. 1: MQ-6 reading drives three simultaneous responses once the threshold is crossed.</div></div>
+    <div class="p-body"><div class="panel p-block reveal"><h3>The problem</h3><p>Most household gas alarms only beep. If nobody is home, or the person is asleep, the leak continues. The response that actually prevents an accident, closing the supply, still depends on a human.</p></div><div class="panel p-block reveal"><h3>The solution</h3><p>Close the loop in hardware. The same controller that detects the leak also drives a servo coupled to the valve, so shutdown happens within the detection cycle, with an audible alarm and an on-screen status for anyone nearby.</p></div><div class="panel p-block reveal full"><h3>How it works</h3><div class="steps"><div class="step"><b>Monitor</b><span>The MQ-6 sensor continuously reports LPG concentration to the Arduino's analog input.</span></div><div class="step"><b>Decide</b><span>Embedded C firmware compares readings against a safety threshold.</span></div><div class="step"><b>Alert</b><span>The buzzer sounds and the LCD switches from normal to a leak warning.</span></div><div class="step"><b>Shut down</b><span>The servo rotates to close the gas valve automatically.</span></div></div></div><div class="panel p-block reveal"><h3>Components</h3><table class="hw"><tr><td>Arduino Uno</td><td>ATmega328P controller running the detection logic</td></tr><tr><td>MQ-6</td><td>Gas sensor sensitive to LPG, butane and propane</td></tr><tr><td>Servo motor</td><td>Actuates the valve shut-off</td></tr><tr><td>16×2 LCD</td><td>Shows live status and warnings</td></tr><tr><td>Buzzer</td><td>Audible alarm</td></tr></table></div><div class="panel p-block reveal"><h3>Recognition</h3><p>Ranked in the <b style="color:var(--gold)">Top 5</b> at a Mini Project Competition.</p><ul><li>Programmed fully in <b>Embedded C</b>.</li><li>Demonstrates the full sensing → decision → actuation loop in a real safety application.</li></ul></div></div>
+    <div class="p-nav">
+      <a class="panel" href="suma-tex.html"><small>← Previous</small><b>SUMA-TEX</b></a>
+      <a class="panel" href="stm32-fault.html"><small>Next →</small><b>Industrial Fault Monitoring (STM32)</b></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Rajeswari T · Chennai, India</span>
+    <div class="f-links">
+      <a href="tel:+919150600890">Call</a>
+      <a href="mailto:pthangarajaraji@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/rajeswari-t-427132322/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Rajeswari-2802" target="_blank" rel="noopener">GitHub</a>
+      <a href="../assets/Rajeswari_T_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

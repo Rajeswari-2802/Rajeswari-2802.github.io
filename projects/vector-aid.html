@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vector Aid: V2V Ambulance Alert | Rajeswari T</title>
+<meta name="description" content="Vector Aid: a V2V ambulance alert system on Raspberry Pi 4 nodes linked by nRF24L01 RF.">
+<meta name="theme-color" content="#020604">
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="nebula"></div>
+<canvas id="cosmos"></canvas>
+<div class="cursor-glow"></div>
+<header class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../assets/logo.svg" alt="Rajeswari T logo"><span>RAJESWARI T<small>EMBEDDED // ECE</small></span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../assets/Rajeswari_T_Resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume ↗</a>
+    <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="p-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+    <div class="eyebrow reveal">P/01 · Final year project</div>
+    <h1 class="reveal d1">Vector Aid: clearing the road <em>before the siren arrives.</em></h1>
+    <p class="lead reveal d2">A vehicle-to-vehicle RF system that lets an ambulance tell the vehicles ahead where it is, where it's heading and which route it will take, so drivers can make way early instead of reacting at the last second.</p>
+    <div class="p-meta"><div class="panel reveal d0"><small>Type</small><b>Team → Final Year Project</b></div><div class="panel reveal d1"><small>Platform</small><b>Raspberry Pi 4 Model B</b></div><div class="panel reveal d2"><small>Link</small><b>nRF24L01 · 2.4 GHz RF</b></div><div class="panel reveal d3"><small>Domain</small><b>V2V · Smart mobility</b></div></div>
+    <div class="panel p-diagram reveal"><svg viewBox="0 0 900 330" role="img" aria-label="System architecture diagram">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3ee07a"/></marker>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs><g><rect x="30" y="30" width="170" height="58" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="115.0" y="53.0" text-anchor="middle" font-size="13" font-weight="500">NEO-M8N GPS</text><text x="115.0" y="72.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">position · speed</text></g><g><rect x="30" y="136" width="170" height="58" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="115.0" y="159.0" text-anchor="middle" font-size="13" font-weight="500">MPU6050</text><text x="115.0" y="178.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">heading</text></g><g><rect x="30" y="242" width="170" height="58" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="115.0" y="265.0" text-anchor="middle" font-size="13" font-weight="500">OpenRouteService</text><text x="115.0" y="284.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">route API</text></g><g><rect x="290" y="110" width="190" height="110" rx="10" fill="#0d2417" stroke="#3ee07a" stroke-width="1.4" filter="url(#glow)"/><text x="385.0" y="159.0" text-anchor="middle" font-size="13" font-weight="500">Raspberry Pi 4</text><text x="385.0" y="178.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">ambulance node (TX)</text></g><g><rect x="700" y="110" width="170" height="110" rx="10" fill="#0d2417" stroke="#3ee07a" stroke-width="1.4" filter="url(#glow)"/><text x="785.0" y="159.0" text-anchor="middle" font-size="13" font-weight="500">Raspberry Pi 4</text><text x="785.0" y="178.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">vehicle unit (RX)</text></g><path d="M200 59 C245 59 245 140 288 140" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M200 59 C245 59 245 140 288 140" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M200 165 H288" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M200 165 H288" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M200 271 C245 271 245 190 288 190" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M200 271 C245 271 245 190 288 190" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M480 165 H698" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M480 165 H698" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><text x="590" y="124" text-anchor="middle" font-size="10" style="fill:#8cffb4">nRF24L01 · 2.4 GHz</text><circle cx="560" cy="165" r="26" fill="none" stroke="#3ee07a" stroke-width="1.2" class="wave"/><circle cx="560" cy="165" r="26" fill="none" stroke="#3ee07a" stroke-width="1.2" class="wave d2"/><circle cx="560" cy="165" r="26" fill="none" stroke="#3ee07a" stroke-width="1.2" class="wave d3"/><text x="785" y="255" text-anchor="middle" font-size="11" style="fill:#c9a857">⚠ ambulance approaching</text></svg><div class="cap">Fig. 1: Ambulance node fuses GPS, heading and route data, then broadcasts it to vehicle units over RF.</div></div>
+    <div class="p-body"><div class="panel p-block reveal"><h3>The problem</h3><p>In dense city traffic, a siren is heard late and gives no direction. Drivers can't tell whether the ambulance is behind them, crossing ahead or taking another road, so lanes clear slowly and unpredictably.</p><p>Every minute lost in transit matters for emergency patients.</p></div><div class="panel p-block reveal"><h3>The idea</h3><p>Give the ambulance a digital voice. Instead of relying on sound, it broadcasts its live position, heading and planned route directly to nearby vehicles over a short-range RF link, and each vehicle unit decides whether to alert its driver.</p></div><div class="panel p-block reveal full"><h3>How it works</h3><div class="steps"><div class="step"><b>Locate</b><span>The NEO-M8N GPS module provides live position and speed on the ambulance node.</span></div><div class="step"><b>Orient</b><span>An MPU6050 motion sensor supplies heading so direction of travel is known.</span></div><div class="step"><b>Route</b><span>OpenRouteService returns the ambulance's planned path to its destination.</span></div><div class="step"><b>Broadcast</b><span>The Raspberry Pi packages the data and transmits it over nRF24L01 to receiver units in range.</span></div></div></div><div class="panel p-block reveal"><h3>Hardware stack</h3><table class="hw"><tr><td>Raspberry Pi 4</td><td>Model B, 4 GB. One board per node (transmitter and receiver)</td></tr><tr><td>nRF24L01</td><td>2.4 GHz RF transceiver with base board for the V2V link</td></tr><tr><td>NEO-M8N</td><td>GNSS module for position and speed</td></tr><tr><td>MPU6050</td><td>IMU (HW-123 board) for heading</td></tr><tr><td>OpenRouteService</td><td>Routing API for the ambulance's planned path</td></tr></table></div><div class="panel p-block reveal"><h3>Engineering decisions</h3><ul><li><b>Direct RF, not cloud:</b> the alert travels vehicle-to-vehicle, so it keeps working where mobile data is weak.</li><li><b>Raspberry Pi 4 over a bare MCU:</b> enough compute to handle GPS parsing, routing data and radio on one board, with room to grow into a product-level build.</li><li><b>Route-aware alerts:</b> sharing the planned path, not just position, lets receivers judge whether the ambulance is actually coming their way.</li></ul></div><div class="panel p-block reveal full"><h3>My journey with it</h3><p>Vector Aid began as a group project. After that first build it became my final-year project, and it has grown into the Raspberry Pi 4 based system described here.</p><div class="note">Built as a team. Tools used: Raspberry Pi 4 Model B, nRF24L01, NEO-M8N GPS, MPU6050, Python, OpenRouteService API.</div></div></div>
+    <div class="p-nav">
+      <a class="panel" href="stm32-fault.html"><small>← Previous</small><b>Industrial Fault Monitoring (STM32)</b></a>
+      <a class="panel" href="suma-tex.html"><small>Next →</small><b>SUMA-TEX</b></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Rajeswari T · Chennai, India</span>
+    <div class="f-links">
+      <a href="tel:+919150600890">Call</a>
+      <a href="mailto:pthangarajaraji@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/rajeswari-t-427132322/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Rajeswari-2802" target="_blank" rel="noopener">GitHub</a>
+      <a href="../assets/Rajeswari_T_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

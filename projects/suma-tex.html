@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUMA-TEX: Textile Predictive Maintenance | Rajeswari T</title>
+<meta name="description" content="SUMA-TEX: multimodal ESP32-S3 condition monitoring for textile power-looms.">
+<meta name="theme-color" content="#020604">
+<link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="nebula"></div>
+<canvas id="cosmos"></canvas>
+<div class="cursor-glow"></div>
+<header class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../assets/logo.svg" alt="Rajeswari T logo"><span>RAJESWARI T<small>EMBEDDED // ECE</small></span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../assets/Rajeswari_T_Resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume ↗</a>
+    <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="p-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+    <div class="eyebrow reveal">P/02 · Edge AI · IoT</div>
+    <h1 class="reveal d1">SUMA-TEX: hearing a loom <em>fail before it stops.</em></h1>
+    <p class="lead reveal d2">Smart Universal Maintenance Assistant for Textile MSMEs: a multimodal condition-monitoring system that watches power-looms through four kinds of sensors and flags developing faults, so small mills can plan maintenance instead of losing shifts to breakdowns.</p>
+    <div class="p-meta"><div class="panel reveal d0"><small>Type</small><b>Predictive maintenance</b></div><div class="panel reveal d1"><small>Controller</small><b>ESP32-S3</b></div><div class="panel reveal d2"><small>Sensing</small><b>4 modalities</b></div><div class="panel reveal d3"><small>Stack</small><b>Python · FastAPI · ML</b></div></div>
+    <div class="panel p-diagram reveal"><svg viewBox="0 0 900 330" role="img" aria-label="System architecture diagram">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3ee07a"/></marker>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs><g><rect x="20" y="20" width="170" height="54" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="105.0" y="41.0" text-anchor="middle" font-size="13" font-weight="500">MPU6050</text><text x="105.0" y="60.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">vibration</text></g><g><rect x="20" y="94" width="170" height="54" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="105.0" y="115.0" text-anchor="middle" font-size="13" font-weight="500">MAX9814</text><text x="105.0" y="134.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">acoustic</text></g><g><rect x="20" y="168" width="170" height="54" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="105.0" y="189.0" text-anchor="middle" font-size="13" font-weight="500">DS18B20</text><text x="105.0" y="208.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">temperature</text></g><g><rect x="20" y="242" width="170" height="54" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="105.0" y="263.0" text-anchor="middle" font-size="13" font-weight="500">SCT-013</text><text x="105.0" y="282.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">motor current</text></g><g><rect x="280" y="110" width="180" height="110" rx="10" fill="#0d2417" stroke="#3ee07a" stroke-width="1.4" filter="url(#glow)"/><text x="370.0" y="159.0" text-anchor="middle" font-size="13" font-weight="500">ESP32-S3</text><text x="370.0" y="178.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">acquisition + features</text></g><g><rect x="540" y="110" width="150" height="110" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="615.0" y="159.0" text-anchor="middle" font-size="13" font-weight="500">FastAPI</text><text x="615.0" y="178.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">backend + ML model</text></g><g><rect x="760" y="110" width="120" height="110" rx="10" fill="#08140d" stroke="rgba(62,224,122,.45)" stroke-width="1.4"/><text x="820.0" y="159.0" text-anchor="middle" font-size="13" font-weight="500">Dashboard</text><text x="820.0" y="178.0" text-anchor="middle" font-size="10" fill="#93a89b" style="fill:#93a89b">health · alerts</text></g><path d="M190 47 C235 47 235 135 278 135" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M190 47 C235 47 235 135 278 135" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M190 121 C235 121 235 155 278 155" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M190 121 C235 121 235 155 278 155" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M190 195 C235 195 235 175 278 175" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M190 195 C235 195 235 175 278 175" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M190 269 C235 269 235 195 278 195" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M190 269 C235 269 235 195 278 195" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><path d="M460 165 H538" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M460 165 H538" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/><text x="499" y="155" text-anchor="middle" font-size="10" style="fill:#8cffb4">Wi-Fi</text><path d="M690 165 H758" fill="none" stroke="rgba(62,224,122,.25)" stroke-width="2"/><path d="M690 165 H758" fill="none" stroke="#3ee07a" stroke-width="2" class="flow" marker-end="url(#arr)"/></svg><div class="cap">Fig. 1: Four sensor streams fused on the ESP32-S3, analysed on a FastAPI backend and surfaced on a dashboard.</div></div>
+    <div class="p-body"><div class="panel p-block reveal"><h3>The problem</h3><p>Textile MSMEs run power-looms for long hours with little monitoring. Faults such as bearing wear, misalignment or motor overload usually show up only when the machine stops, costing production time and repair money.</p></div><div class="panel p-block reveal"><h3>The approach</h3><p>Every mechanical fault leaves a trace: a change in vibration, a new sound, extra heat or a shift in current draw. SUMA-TEX reads all four together, because one sensor alone is easily fooled by normal operating changes.</p></div><div class="panel p-block reveal full"><h3>How it works</h3><div class="steps"><div class="step"><b>Sense</b><span>Vibration, acoustic, temperature and motor-current signals are captured from the loom.</span></div><div class="step"><b>Process</b><span>The ESP32-S3 acquires the signals and extracts features such as statistics and frequency content.</span></div><div class="step"><b>Classify</b><span>A FastAPI backend runs an ML model that separates normal behaviour from abnormal patterns.</span></div><div class="step"><b>Act</b><span>Health status and alerts are shown on a dashboard for maintenance decisions.</span></div></div></div><div class="panel p-block reveal"><h3>Sensor suite</h3><table class="hw"><tr><td>ESP32-S3</td><td>Main controller: acquisition, processing, Wi-Fi</td></tr><tr><td>MPU6050</td><td>Vibration via accelerometer / gyroscope</td></tr><tr><td>MAX9814</td><td>Microphone amplifier with AGC for acoustic signature</td></tr><tr><td>DS18B20</td><td>Digital temperature sensor on the machine body</td></tr><tr><td>SCT-013</td><td>Non-invasive current transformer on the motor supply</td></tr></table></div><div class="panel p-block reveal"><h3>Why multimodal</h3><ul><li><b>Cross-checking:</b> a vibration spike paired with a current rise is far more telling than either alone.</li><li><b>Non-invasive:</b> clamp-on and surface-mount sensors fit existing looms without modification.</li><li><b>Low cost:</b> built from commodity parts so it suits small textile units, not just large mills.</li></ul></div></div>
+    <div class="p-nav">
+      <a class="panel" href="vector-aid.html"><small>← Previous</small><b>Vector Aid: V2V Ambulance Alert</b></a>
+      <a class="panel" href="gas-shutdown.html"><small>Next →</small><b>Gas Detection & Emergency Shutdown</b></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span data-year></span> Rajeswari T · Chennai, India</span>
+    <div class="f-links">
+      <a href="tel:+919150600890">Call</a>
+      <a href="mailto:pthangarajaraji@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/rajeswari-t-427132322/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Rajeswari-2802" target="_blank" rel="noopener">GitHub</a>
+      <a href="../assets/Rajeswari_T_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
